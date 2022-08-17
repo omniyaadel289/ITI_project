@@ -1,5 +1,5 @@
 <template>
-<Header/>
+<div class="col-10 my-3 mx-auto">
     <div class="card" style="width: 60rem;">
         <div class="row no-gutters">
             <div class="col-sm-2">
@@ -14,5 +14,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>

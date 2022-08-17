@@ -7,8 +7,10 @@
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">SmartPhones</a></li>
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
         <li><button class="btn btn-primary px-5" data-toggle="dropdown">Cart <i class="fa-solid fa-cart-shopping"></i></button>
-                <ul class="dropdown-menu"><li class="dropdown-item"><img style="width:50px;height:50px;" src="https://images-americanas.b2w.io/produtos/01/00/item/132165/8/132165801G1.jpg"> <p>name </p><p>price</p> </li>
-                  <li class="dropdown-item"><a class="btn btn-primary text-light">Cart</a> </li>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><img style="width:4rem;height:4rem;" src="https://images-americanas.b2w.io/produtos/01/00/item/132165/8/132165801G1.jpg"> <p>name </p><p>price</p> </li>
+                  <li class="dropdown-item"><a class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></li>
+                  <li class="dropdown-header">Total price : $</li>
                 </ul></li>
     </ul>
 </div>

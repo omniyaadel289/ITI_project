@@ -1,13 +1,17 @@
 <template>
-<Header/>
-<div class="card my-5" style="width: 18rem;">
-  <img src="" class="card-img-top" >
-  <div class="card-body">
-    <h5 class="card-title text-center "><a class="text-dark" href="#">Product Name</a></h5>
-    <p class="card-text text-center">Product details</p>
-    <h6 class="card-text">Price $</h6>
-    <a href="#" class="btn btn-success" style="width:15rem;">Add to Cart <i class="fa-solid fa-cart-shopping"></i></a>
-  </div>
-</div>
+                <div class="d-flex flex-row flex-wrap justify-content-around align-items-baseline">
+                    <div  class="card my-3" style="width:20rem">
+                        <img src="" class="card-img-top product-img" alt="" id="productimg">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">product.name </h5>
+                            <p class="card-text text-center"> product.details </p>
+                            <h6 class="card-title ">product.price $</h6>
+                            <div class="d-flex justify-content-center align-items-baseline">
+                                <button class="btn btn-success px-5" @click="addProductToCart">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 </template>
 
