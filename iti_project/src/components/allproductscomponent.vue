@@ -8,5 +8,4 @@
     <a href="#" class="btn btn-success" style="width:15rem;">Add to Cart <i class="fa-solid fa-cart-shopping"></i></a>
   </div>
 </div>
-
 </template>

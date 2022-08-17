@@ -1,21 +1,53 @@
 <template>
 <div class="container">
     <div class="row">
-       <Header/>
+       <div class="col-12 bg-dark py-2">
+    <ul class="d-flex justify-content-around my-3 " style="text-decoration:none;">
+        <li><a class="text-light" href="#" @click.prevent="targetcomponent='allproducts'">Allproducts</a></li>
+        <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">SmartPhones</a></li>
+        <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
+        <li><button class="btn btn-primary px-5" data-toggle="dropdown">Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                <ul class="dropdown-menu"><li class="dropdown-item"><img style="width:50px;height:50px;" src="https://images-americanas.b2w.io/produtos/01/00/item/132165/8/132165801G1.jpg"> <p>name </p><p>price</p> </li>
+                  <li class="dropdown-item"><a class="btn btn-primary text-light">Cart</a> </li>
+                </ul></li>
+    </ul>
+</div>
     </div>
     <div class="row">
-         <All/>
+      <div class="col-8">
+        <keep-alive>
+          <component :is="targetcomponent"/>
+        </keep-alive>
+      </div>
     </div>
 </div>
 </template>
 <script>
-import Header from './components/header.vue'
-import All from './components/allproducts.vue'
+import allproducts from './components/allproductscomponent.vue'
+import notebooks from './components/notebookscomponent.vue'
+import smartphones from './components/smartphonescomponent.vue'
+import cart from './components/cartcomponent.vue'
 export default {
-  name: 'App',
+  data(){
+    return{
+      targetcomponent:'allproducts'
+    }
+  },
   components: {
-    Header,
-    All
-  }
+    allproducts,
+    smartphones,
+    notebooks,
+    cart,
+}
 }
 </script>
+<style scoped>
+li{
+  display: inline-block;
+  font-family:'Lucida Sans';
+}
+a{
+    text-decoration: none;
+}
+</style>
+
