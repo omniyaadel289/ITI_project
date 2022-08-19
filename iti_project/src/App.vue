@@ -3,8 +3,8 @@
     <div class="row">
        <div class="col-12 " style="background-color: #333;">
     <ul class="d-flex justify-content-around my-3 flex-wrap px-5" style="text-decoration:none;">
-        <li><a class="text-light" href="#" @click.prevent="targetcomponent='allproducts'">Allproducts</a></li>
-        <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">SmartPhones</a></li>
+        <li><a class="text-light" href="#" @click.prevent="targetcomponent='allproducts'">All Products</a></li>
+        <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">Smart Phones</a></li>
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
         <li><button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i></button>
                 <div class="dropdown-menu">
@@ -46,6 +46,7 @@ export default {
 li{
   display: inline-block;
   font-family:'Lucida Sans';
+  font-size: large;
 }
 a{
     text-decoration: none;
