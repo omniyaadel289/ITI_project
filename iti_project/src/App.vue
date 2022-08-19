@@ -17,9 +17,13 @@
 </div>
     </div>
     <div class="row">
+        <!--<transition name="appear">-->
+          
+        <transition name="fade">
         <keep-alive>
           <component :is="targetcomponent"/>
         </keep-alive>
+        </transition>
     </div>
 </div>
 </template>
@@ -51,5 +55,26 @@ li{
 a{
     text-decoration: none;
 }
+/*.leave-enter-active {
+    transition: all 0s;
+  }
+  .appear-enter-active {
+    animation: appear-animation 2s;
+  }
+  @keyframes appear-animation {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }*/
+    .fade-enter-active, .fade-leave-active {
+    transition: all 0.5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
 </style>
 
