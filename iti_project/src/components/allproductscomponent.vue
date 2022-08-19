@@ -1,14 +1,12 @@
 <template>
-                <div class="d-flex flex-row flex-wrap justify-content-between ">
-                    <div  class="card my-3" style="width:20rem">
-                        <img src="" class="card-img-top product-img" alt="" id="productimg">
-                        <div class="card-body" v-for="allproduct in allproducts" :key="allproducts.price">
-                            <p class="card-text text-center">{{allproduct.image}} </p>
-                            <h5 class="card-title text-center">{{allproduct.name}} </h5>
-                            <p class="card-text text-center">{{allproduct.details}} </p>
-                            <h6 class="card-title ">{{allproduct.price}} $</h6>
-                            <div class="d-flex justify-content-center align-items-baseline">
-                                <button class="btn btn-success px-5" @click="addProductToCart">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="d-flex flex-row flex-wrap justify-content-around align-items-baseline ">
+                    <div  v-for="product in allproducts" :key="product.price" class="card my-3" style="width:20rem">
+                        <img :src="product.image" class="card-img-top product-img" style="height:18rem">
+                        <div class="card-body" >
+                            <h5 class="card-title text-center" style=" height:8rem;"><a class="text-dark" href="#">{{product.name}}</a> </h5>
+                            <h6 class="card-text my-3">{{product.price}} $</h6>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-success" style="width:20rem; height: 3rem;" @click="addProductToCart">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
                             </div>
                         </div>
                     </div>

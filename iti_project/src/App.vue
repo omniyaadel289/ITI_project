@@ -1,26 +1,26 @@
 <template>
 <div class="container">
     <div class="row">
-       <div class="col-12 bg-dark py-2">
+       <div class="col-12 py-2" style="background-color: #333;">
     <ul class="d-flex justify-content-around my-3 " style="text-decoration:none;">
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='allproducts'">Allproducts</a></li>
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">SmartPhones</a></li>
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
-        <li><button class="btn btn-primary px-5" data-toggle="dropdown">Cart <i class="fa-solid fa-cart-shopping"></i></button>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-item"><img style="width:4rem;height:4rem;" src="https://images-americanas.b2w.io/produtos/01/00/item/132165/8/132165801G1.jpg"> <p>name </p><p>price</p> </li>
-                  <li class="dropdown-item"><a class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></li>
-                  <li class="dropdown-header">Total price : $</li>
-                </ul></li>
+        <li><div class="btn-group">
+          <button class="btn btn-primary px-3" @click.prevent="targetcomponent='cart'">Cart <i class="fa-solid fa-cart-shopping"></i></button>
+          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu">
+                  <span class="dropdown-item"><img style="width:8rem;height:8rem;" src=""> <p>name </p><p>price</p> </span>
+                  <span class="dropdown-item"><a class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></span>
+                  <span class="dropdown-header">Total price : $</span>
+                </div></div></li>
     </ul>
 </div>
     </div>
     <div class="row">
-      <div class="col-8">
         <keep-alive>
           <component :is="targetcomponent"/>
         </keep-alive>
-      </div>
     </div>
 </div>
 </template>
