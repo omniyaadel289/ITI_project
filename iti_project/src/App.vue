@@ -1,19 +1,18 @@
 <template>
 <div class="container">
     <div class="row">
-       <div class="col-12 py-2" style="background-color: #333;">
-    <ul class="d-flex justify-content-around my-3 " style="text-decoration:none;">
+       <div class="col-12 " style="background-color: #333;">
+    <ul class="d-flex justify-content-around my-3 flex-wrap px-5" style="text-decoration:none;">
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='allproducts'">Allproducts</a></li>
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">SmartPhones</a></li>
         <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
-        <li><div class="btn-group">
-          <button class="btn btn-primary px-3" @click.prevent="targetcomponent='cart'">Cart <i class="fa-solid fa-cart-shopping"></i></button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <li><button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i></button>
                 <div class="dropdown-menu">
-                  <span class="dropdown-item"><img style="width:8rem;height:8rem;" src=""> <p>name </p><p>price</p> </span>
+                  <span class="dropdown-item"><img style="width:6rem;height:6rem;" src=""> <p>name </p><p>price</p> </span>
                   <span class="dropdown-item"><a class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></span>
+                  <div class="dropdown-divider"></div>
                   <span class="dropdown-header">Total price : $</span>
-                </div></div></li>
+                </div></li>
     </ul>
 </div>
     </div>
