@@ -1,16 +1,16 @@
 <template>
                 <div class="d-flex flex-row flex-wrap justify-content-around">
-                    <div  v-for="notebook in notebook" :key="notebook.price" class="card my-3 py-3" style="width:20rem; height: 30rem;">
-                        <img :src="notebook.image" class="card-img-top product-img" style="max-height: 50% ;">
+                    <div  v-for="notebook in notebook" :key="notebook.price" class="card my-3 py-3" style="width:20rem;">
+                        <img :src="notebook.image" class="card-img-top product-img">
                         <div class="card-body" >
                             <h5 class="card-title text-center"><a class="text-dark" href="#">{{notebook.name}}</a> </h5>
-                        </div>
-                        <h6 class="card-text my-3 px-3">{{notebook.price}} $</h6>
+                            <h6 class="card-text my-3">{{notebook.price}} $</h6>
                             <div class="text-center">
-                                <button class="btn btn-success px-5" @click="addProductToCart">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="btn btn-success px-5" @click="addProductToCart(notebook)">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
                             </div>
+                        </div>
                     </div>
-                </div>
+                 </div>
 
 </template> 
 <script>
@@ -24,6 +24,7 @@ export default {
       const res= await fetch("http://localhost:3000/notebook");
       this.notebook=await res.json();
     },
+    props : ['addProductToCart'],
     data(){
         return{
         notebook : [],

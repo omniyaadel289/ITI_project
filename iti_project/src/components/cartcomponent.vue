@@ -1,19 +1,47 @@
 <template>
 <div class="col-10 my-3 mx-auto">
-    <div class="card" style="width: 60rem;">
+    <h2 v-if="products.length == 0">you'r cart is empty</h2>
+    <div v-if="products.length>0" v-for="(item,index) in products" :key="index" class="card" style="width: 60rem;">
         <div class="row no-gutters">
             <div class="col-sm-2">
-                <img class="card-img" src="https://images-americanas.b2w.io/produtos/01/00/item/132165/8/132165801G1.jpg" alt="Suresh Dasari Card">
+                <img class="card-img" :src="item.image">
             </div>
             <div class="col-sm-5">
                 <div class="card-body">
-                    <h4 class="card-title">Product name</h4>
-                    <p class="card-text">Produt details</p>
-                    <h6 class="card-text">Produt price$</h6>
-                    <button class="btn btn-danger">Remove</button> 
+                     <h4 class="card-title">{{item.name}}</h4>
+                    <p class="card-text">{{item.details}}</p>
+                    <h6 class="card-text">{{item.price}}$</h6>
+                    <button class="btn btn-danger" @click="removeProduct(item,index)">Remove</button> 
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="total-cost">
+        Total price : {{totalPrice}} $
     </div>
+</div>
 </template>
+
+<script>
+
+    export default {
+        props: ['products','totalPrice','removeProduct'],
+    }
+</script>
+
+
+<style scoped>
+    h2 {
+        color: red;
+        font-size: 40px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .total-cost {
+        color: red;
+        font-size: 40px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+</style>
