@@ -28,17 +28,19 @@
         </div>
     </div>
 
+<Transition name="slide-fade">
     <allproducts v-if="targetcomponent === 'allproducts'" :addProductToCart="addProductToCart"/>
+      </Transition>
+      <Transition name="slide-fade">
     <smartphones v-if="targetcomponent === 'smartphones'" :addProductToCart="addProductToCart"/>
+    </Transition>
+  <transition name="slide-fade">
     <notebooks v-if="targetcomponent === 'notebooks'"     :addProductToCart="addProductToCart"/>
+    </transition>
+<transition name="slide-fade">
     <cart v-if="targetcomponent === 'cart'" :products="productToCart" :totalPrice="totalPrice" :removeProduct="removeProduct"/>
+</transition>
 
-
-    <!-- <div class="row">
-        <keep-alive>
-          <component :is="targetcomponent"/>
-        </keep-alive>
-    </div> -->
 </div>
 </template>
 
@@ -88,7 +90,8 @@ li{
 a{
     text-decoration: none;
 }
-/*.leave-enter-active {
+/* appear
+.leave-enter-active {
     transition: all 0s;
   }
   .appear-enter-active {
@@ -104,7 +107,8 @@ a{
     }
   }*/
 
-    /*.fade-enter-active, .fade-leave-active {
+    /* fade
+    .fade-enter-active, .fade-leave-active {
     transition: all 0.5s;
   }
   .fade-enter, .fade-leave-to {
@@ -114,6 +118,20 @@ a{
     width: 18rem;
     white-space: pre-wrap;
     word-break: break-word;
+}
+
+.slide-fade-enter-active {
+  transition: all 1s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 1s cubic-bezier(100, 1, 1, 0);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(800px);
+  opacity: 0;
 }
 </style>
 
