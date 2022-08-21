@@ -9,15 +9,19 @@
             <li>
               <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i></button>
                     <div class="dropdown-menu">
-                      <span v-for="item in productToCart" class="dropdown-item d-flex justify-content-between">
-                          <img style="width:6rem;height:6rem;" :src="item.image">
-                          <div>
-                            <p>name : {{item.name}}</p>
-                             <p>price : {{item.price}}$</p> 
-                          </div>
-                       </span>
-                      <span class="dropdown-item"><a class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></span>
-                      <span class="dropdown-header">Total price : {{totalPrice}} $</span>
+                    <div  v-for="item in productToCart"  class="dropdown-item card">
+                    <div class="text-center">
+                        <img :src="item.image" class="card-img-top product-img " style="height:5rem; width: 5rem;">
+                        </div>
+                        <div class="card-body">
+                          <div class="newline text-center">
+                            {{item.name}} 
+                            </div>
+                            <h6 class="card-text text-success my-3 ">{{item.price}} $</h6>
+                        </div>
+                        </div>
+                       <div class="text-center my-3"><a  class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></div>
+                      <span class="dropdown-header"><b>Total Price : {{totalPrice}} $</b></span>
                     </div>
             </li>
         </ul>
@@ -44,7 +48,8 @@ import allproducts from './components/allproductscomponent.vue';
 import notebooks from './components/notebookscomponent.vue';
 import smartphones from './components/smartphonescomponent.vue';
 import cart from './components/cartcomponent.vue'
-export default {
+
+export default {  
     data(){
       return{
         targetcomponent:'allproducts',
@@ -82,6 +87,33 @@ li{
 }
 a{
     text-decoration: none;
+}
+/*.leave-enter-active {
+    transition: all 0s;
+  }
+  .appear-enter-active {
+    animation: appear-animation 2s;
+  }
+  @keyframes appear-animation {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }*/
+
+    /*.fade-enter-active, .fade-leave-active {
+    transition: all 0.5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }*/
+  .newline {
+    width: 18rem;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 </style>
 
