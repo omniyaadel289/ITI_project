@@ -7,7 +7,7 @@
             <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">Smart Phones</a></li>
             <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
             <li>
-              <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i></button>
+              <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span class="circle">products.lenght</span></button>
                     <div class="dropdown-menu">
                     <div  v-for="item in productToCart"  class="dropdown-item card">
                     <div class="text-center">
@@ -132,6 +132,16 @@ a{
 .slide-fade-leave-to {
   transform: translateX(800px);
   opacity: 0;
+}
+.circle{
+  position: absolute;
+  top: 0.70em;
+  right: 8em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: white;
+  color: red;
 }
 </style>
 
