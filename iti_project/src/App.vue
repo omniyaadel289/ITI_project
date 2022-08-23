@@ -7,7 +7,7 @@
             <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">Smart Phones</a></li>
             <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
             <li>
-              <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span class="badge badge-success ml-2">products.lenght</span></button>
+              <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span class="badge badge-danger ml-2">products.lenght</span></button>
                     <div class="dropdown-menu">
                     <div  v-for="item in productToCart"  class="dropdown-item card">
                     <div class="text-center">
