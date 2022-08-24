@@ -3,7 +3,7 @@
                     <div  v-for="notebook in notebook" :key="notebook.price" class="card my-3 py-3" style="width:20rem; height: 30rem;">
                         <img :src="notebook.image" class="card-img-top product-img" style="max-height: 50% ;">
                         <div class="card-body" >
-                            <h5 class="card-title text-center"><a class="text-dark" href="#">{{notebook.name}}</a> </h5>
+                            <h5 class="card-title text-center"><router-link :to="'/productdetails' + notebook.id" href="#" class="text-dark" >{{notebook.name}}</router-link> </h5>
                         </div>
                         <h6 class="card-text my-3 px-3">{{notebook.price}} $</h6>
                             <div class="text-center">

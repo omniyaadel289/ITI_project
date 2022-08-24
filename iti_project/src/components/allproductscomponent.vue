@@ -3,7 +3,7 @@
                     <div  v-for="product in allproducts" :key="product.price" class="card my-3 py-3" style="width:20rem; height: 30rem ;">
                         <img :src="product.image" class="card-img-top product-img" style="max-height: 50% ;">
                         <div class="card-body">
-                            <h5 class="card-title text-center"><a class="text-dark" href="#" data-toggle="modal" data-target="#mymodal">{{product.name}}</a> </h5>
+                            <h5 class="card-title text-center"><router-link :to="'/productdetails' + product.id" class="text-dark" href="#" >{{product.name}}</router-link> </h5>
                         </div>
                         <h6 class="card-text my-3 px-3">{{product.price}} $</h6>
                                                     <div class="text-center">
@@ -11,7 +11,7 @@
                             </div>
                     </div>
                 </div>
-            <div class="modal" id="mymodal">
+                <div class="modal" id="mymodal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div v-for="product in allproducts" :key="product.price" class="modal-body text-center">
@@ -28,7 +28,6 @@
             </div>
         </div>
     </div>
- 
 </template>
 <script>
 //  import students from '../students'
@@ -45,6 +44,7 @@ export default {
     data(){
         return{
         allproducts : [],
+        productToCart : [],
         }
     },components:{
     allproductscomponent,

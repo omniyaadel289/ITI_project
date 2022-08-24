@@ -1,6 +1,6 @@
 {
   "allproducts": [
-    {
+    {"id": 1,
       "name": "SAMSUNG Dual Sim 12GB RAM 256GB 5G Galaxy S22 Ultra - Phantom Black",
       "price": 2500,
       "image": "https://th.bing.com/th/id/R.b6e521e0631909502106976f40d3ebed?rik=lT%2fhZQMeJVTvpw&pid=ImgRaw&r=0",
@@ -8,7 +8,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 2,
       "name": "Apple iPhone 13 Pro Max 256GB Gold",
       "price": 3700,
       "image": "https://imag28.ru/image/cache/catalog/iphone/iphone13pro/iphone-13-pro-gold-2-600x600.jpg",
@@ -16,7 +16,7 @@
       "totalReviews": 0,
        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 3,
       "name": "Samsung Galaxy A52 Dual SIM - 6.5 inches, 8 GB RAM, 256 GB - White",
       "price": 8770,
       "image": "https://cdn.weasy.io/users/rumex2/catalog/821150_3_samsung-galaxy-a52-5g-6-5-dual-sim-8gb-256gb-white-desbloqueado_thumb.jpg",
@@ -24,7 +24,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 4,
       "name": "New Apple iPhone 13 Pro Max (128 GB) - Alpine Green",
       "price": 2400,
       "image": "https://shop.du.ae/medias/sys_master/images/images/h77/h4a/9006506541086/iPhone-13-Alpine-Green-.jpg",
@@ -32,7 +32,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 5,
       "name": "Xiaomi Redmi Note 11S Dual SIM Amoled DotDisplay 6.43 Inch 90Hz Twilight Blue 8GB RAM 128GB 4G LTE with",
       "price": 6999,
       "image": "https://images.yaoota.com/9_Qki9IGrez5r4yCtWEhparXgtw=/trim/fit-in/500x500/filters:quality(80)/yaootaweb-production/media/crawledproductimages/0755ea1b36cc800792ed303016d15b4906c9cb91.jpg",
@@ -40,7 +40,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 6,
       "name": "Dell Vostro 3510 Laptop 15.6 FHD – 11th Gen Intel Core i7-1165G7 - 512GB SSD - 8GB DDR4 - Windows 10 Pro - Intel UHD Graphics - New",
       "price": 1200,
       "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/vostro-notebooks/15-3510/media-gallery/black/notebook_vostro_15_3510_bk_gallery_7.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=653&qlt=100,0&resMode=sharp2&size=653,402",
@@ -48,7 +48,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 7,
       "name": "Dell Latitude E6510 320 GB Portable Computer (15.6in)",
       "price": 4450,
       "image": "https://www.laptopsdirect.co.uk/Images/6R1R5_1_Classic.jpg?v=10&width=200&height=200&switchoff=enabled",
@@ -56,7 +56,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 8,
       "name": "Apple Macbook Air 2020 Model, (13-Inch, Apple M1 chip with 8-core CPU and 7-core GPU, 8GB, 256GB, MGN93), Eng-KB, Silver",
       "price": 4000,
       "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-config-201810?wid=539&hei=312&fmt=jpeg&qlt=95&.v=1633033424000",
@@ -64,7 +64,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 9,
       "name": "Lenovo V15-ADA 82C7007YED Laptop - AMD 3020e, 4 GB RAM, 1TB HDD, Integrated AMD Radeon Graphics, 15.6",
       "price": 6406,
       "image": "https://images.yaoota.com/gzVo5D3bkY5yIk3d-dloINMcJr4=/trim/fit-in/500x500/filters:quality(80)/yaootaweb-production/media/crawledproductimages/efe6af5dc03e6aff1c89773a8a0ca9fd4d387cb9.jpg",
@@ -72,7 +72,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 10,
       "name": "All-New Kindle Oasis (10th Gen), Now with adjustable warm light, 7",
       "price": 5199,
       "image": "https://m.media-amazon.com/images/I/61HHeWTB-RL._AC_SX679_.jpg",
@@ -83,7 +83,7 @@
   ],
 
   "smartphones": [
-    {
+    { "id": 1,
       "name": "SAMSUNG Dual Sim 12GB RAM 256GB 5G Galaxy S22 Ultra - Phantom Black",
       "price": 2050,
       "image": "https://th.bing.com/th/id/R.b6e521e0631909502106976f40d3ebed?rik=lT%2fhZQMeJVTvpw&pid=ImgRaw&r=0",
@@ -91,7 +91,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 2,
       "name": "Apple iPhone 13 Pro Max 256GB Gold",
       "price": 3700,
       "image": "https://imag28.ru/image/cache/catalog/iphone/iphone13pro/iphone-13-pro-gold-2-600x600.jpg",
@@ -99,7 +99,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 3,
       "name": "Samsung Galaxy A52 Dual SIM - 6.5 inches, 8 GB RAM, 256 GB - White",
       "price": 8770,
       "image": "https://cdn.weasy.io/users/rumex2/catalog/821150_3_samsung-galaxy-a52-5g-6-5-dual-sim-8gb-256gb-white-desbloqueado_thumb.jpg",
@@ -107,7 +107,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 4,
       "name": "New Apple iPhone 13 Pro Max (128 GB) - Alpine Green",
       "price": 2400,
       "image": "https://shop.du.ae/medias/sys_master/images/images/h77/h4a/9006506541086/iPhone-13-Alpine-Green-.jpg",
@@ -115,7 +115,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    {"id": 5,
       "name": "Xiaomi Redmi Note 11S Dual SIM Amoled DotDisplay 6.43 Inch 90Hz Twilight Blue 8GB RAM 128GB 4G LTE with",
       "price": 6999,
       "image": "https://images.yaoota.com/9_Qki9IGrez5r4yCtWEhparXgtw=/trim/fit-in/500x500/filters:quality(80)/yaootaweb-production/media/crawledproductimages/0755ea1b36cc800792ed303016d15b4906c9cb91.jpg",
@@ -126,7 +126,7 @@
   ],
 
   "notebook": [
-    {
+    { "id": 6,
       "name": "Dell Vostro 3510 Laptop 15.6 FHD – 11th Gen Intel Core i7-1165G7 - 512GB SSD - 8GB DDR4 - Windows 10 Pro - Intel UHD Graphics - New",
       "price": 1200,
       "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/vostro-notebooks/15-3510/media-gallery/black/notebook_vostro_15_3510_bk_gallery_7.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=653&qlt=100,0&resMode=sharp2&size=653,402",
@@ -134,7 +134,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 7,
       "name": "Dell Latitude E6510 320 GB Portable Computer (15.6in)",
       "price": 4450,
       "image": "https://www.laptopsdirect.co.uk/Images/6R1R5_1_Classic.jpg?v=10&width=200&height=200&switchoff=enabled",
@@ -142,7 +142,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 8,
       "name": "Apple Macbook Air 2020 Model, (13-Inch, Apple M1 chip with 8-core CPU and 7-core GPU, 8GB, 256GB, MGN93), Eng-KB, Silver",
       "price": 2000,
       "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-config-201810?wid=539&hei=312&fmt=jpeg&qlt=95&.v=1633033424000",
@@ -150,7 +150,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 9,
       "name": "Lenovo V15-ADA 82C7007YED Laptop - AMD 3020e, 4 GB RAM, 1TB HDD, Integrated AMD Radeon Graphics, 15.6",
       "price": 6406,
       "image": "https://images.yaoota.com/gzVo5D3bkY5yIk3d-dloINMcJr4=/trim/fit-in/500x500/filters:quality(80)/yaootaweb-production/media/crawledproductimages/efe6af5dc03e6aff1c89773a8a0ca9fd4d387cb9.jpg",
@@ -158,7 +158,7 @@
       "totalReviews": 0,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
-    {
+    { "id": 10,
       "name": "All-New Kindle Oasis (10th Gen), Now with adjustable warm light, 7",
       "price": 5199,
       "image": "https://m.media-amazon.com/images/I/61HHeWTB-RL._AC_SX679_.jpg",

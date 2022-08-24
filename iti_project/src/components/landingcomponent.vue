@@ -3,9 +3,9 @@
         <div class="row">
           <div class="col-12 " style="background-color: #333;">
         <ul class="d-flex justify-content-around my-3 flex-wrap px-5" style="text-decoration:none;">
-            <li><a class="text-light" href="#" @click.prevent="targetcomponent='allproducts'">All Products</a></li>
-            <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">Smart Phones</a></li>
-            <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
+            <li><router-link to ='/allproducts' class="text-light">All Products</router-link></li>
+            <li><router-link to='/smartphones' class="text-light" >Smart Phones</router-link></li>
+            <li><router-link to='/notebooks' class="text-light"  >Notebooks</router-link></li>
             <li>
               <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span class="circle"></span></button>
                     <div class="dropdown-menu">
@@ -20,36 +20,21 @@
                             <h6 class="card-text text-success my-3 ">{{item.price}} $</h6>
                         </div>
                         </div>
-                       <div class="text-center my-3"><a  class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></div>
+                       <div class="text-center my-3"><router-link to='/cart'  class="btn btn-primary text-light">View Cart</router-link></div>
                       <span class="dropdown-header"><b>Total Price : {{totalPrice}} $</b></span>
                     </div>
             </li>
         </ul>
         </div>
     </div>
+    <router-view></router-view>
+    </div>
+
     
-      <Transition name="slide-fade">
-    <allproducts v-if="targetcomponent === 'allproducts'" :addProductToCart="addProductToCart"/>
-      </Transition>
-      <Transition name="slide-fade">
-    <smartphones v-if="targetcomponent === 'smartphones'" :addProductToCart="addProductToCart"/>
-    </Transition>
-  <transition name="slide-fade">
-    <notebooks v-if="targetcomponent === 'notebooks'"     :addProductToCart="addProductToCart"/>
-    </transition>
-<transition name="slide-fade">
-    <cart v-if="targetcomponent === 'cart'" :products="productToCart" :totalPrice="totalPrice" :removeProduct="removeProduct"/>
-</transition>
-</div>
+    
+
 </template>
-
-
 <script>
-import allproducts from './components/allproductscomponent.vue';
-import notebooks from './components/notebookscomponent.vue';
-import smartphones from './components/smartphonescomponent.vue';
-import cart from './components/cartcomponent.vue'
-
 export default {  
     data(){
       return{
@@ -57,12 +42,6 @@ export default {
         productToCart : [],
         totalPrice : 0,
       }
-    },
-    components: {
-      allproducts,
-      smartphones,
-      notebooks,
-      cart,
     },
 
     methods: {
@@ -77,8 +56,6 @@ export default {
     },
 }
 </script>
-
-
 <style scoped>
 li{
   display: inline-block;
@@ -89,30 +66,7 @@ li{
 a{
     text-decoration: none;
 }
-/*appear
-.leave-enter-active {
-    transition: all 0s;
-  }
-  .appear-enter-active {
-    animation: appear-animation 2s;
-  }
-  @keyframes appear-animation {
-    0% {
-      transform: translateY(10%);
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }*/
 
-    /* fade 
-    .fade-enter-active, .fade-leave-active {
-    transition: all 0.5s;
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }*/
   .newline {
     width: 18rem;
     white-space: pre-wrap;
@@ -131,16 +85,4 @@ a{
 .slide-fade-leave-to {
   transform: translateX(1000px);
   opacity: 0;
-}
-.circle{
-  position: absolute;
-  top: 0.70em;
-  right: 8em;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background-color: white;
-  color: red;
-}
-</style>
-
+}</style>
