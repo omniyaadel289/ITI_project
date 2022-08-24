@@ -32,6 +32,7 @@
 <script>
 //  import students from '../students'
 
+// import { json } from 'body-parser';
 import allproductscomponent from './allproductscomponent.vue'
 
 
@@ -40,15 +41,21 @@ export default {
       const res= await fetch("http://localhost:3000/allproducts");
       this.allproducts=await res.json();
     },
-    props : ['addProductToCart'],
+    // props : ['addProductToCart'],
     data(){
         return{
         allproducts : [],
-        productToCart : [],
+        productToCart : localStorage.getItem("product") ? JSON.parse( localStorage.getItem("product"))  : [],
         }
     },components:{
     allproductscomponent,
     },
+    methods:{
+        addProductToCart: function(product){
+            this.productToCart.push(product)
+            localStorage.setItem("product",JSON.stringify(this.productToCart))
+        }
+    }
 }
 
 

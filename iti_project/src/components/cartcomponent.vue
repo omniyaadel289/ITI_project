@@ -11,28 +11,36 @@
                      <h4 class="card-title">{{item.name}}</h4>
                     <p class="card-text">{{item.details}}</p>
                     <h6 class="card-text text-success my-2">{{item.price}}$</h6>
-                    <button class="btn btn-danger my-3" @click="removeProduct(item,index)">Remove</button> 
+                    <button class="btn btn-danger my-3" >Remove</button> 
                 </div>
             </div>
         </div>
     </div>
 
     <div v-if="products.length>0" class="text-success text-left">
-       <h2> Total price : {{totalPrice}} $</h2>
+       <h2> Total price :  $</h2>
     </div>
 </div>
 </template>
 
 <script>
 
-    export default {
-        props: ['products','totalPrice','removeProduct'],
+   export default {
+    
+    data(){
+        return{
+            products : localStorage.getItem("product") ? JSON.parse( localStorage.getItem("product"))  : [],
         }
+    },
+    // methods: {
+
+    // }
+}
 
 
 </script>
 
 
-<style scoped>
+<!-- <style scoped>
 
-</style>
+</style> -->

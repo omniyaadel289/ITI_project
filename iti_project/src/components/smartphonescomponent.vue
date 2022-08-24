@@ -25,16 +25,21 @@ export default {
       const res= await fetch("http://localhost:3000/smartphones");
       this.smartphones=await res.json();
     },
-    props : ['addProductToCart'],
+    // props : ['addProductToCart'],
     data(){
         return{
         smartphones : [],
+        PhoneToCart : localStorage.getItem("product") ? JSON.parse( localStorage.getItem("product"))  : [],
         }
     },components:{
     smartphonescomponent,
 },
     methods: {
-     
+
+        addProductToCart: function(product){
+            this.PhoneToCart.push(product)
+            localStorage.setItem("product",JSON.stringify(this.PhoneToCart))
+        },
     }
 }
 

@@ -25,16 +25,20 @@ export default {
       const res= await fetch("http://localhost:3000/notebook");
       this.notebook=await res.json();
     },
-    props : ['addProductToCart'],
+    // props : ['addProductToCart'],
     data(){
         return{
         notebook : [],
+        noteToCart : localStorage.getItem("product") ? JSON.parse( localStorage.getItem("product"))  : [],
         }
     },components:{
     notebookscomponent,
 },
     methods: {
-     
+            addProductToCart: function(product){
+            this.noteToCart.push(product);
+            localStorage.setItem("product",JSON.stringify(this.noteToCart));
+        },
     }
 }
 

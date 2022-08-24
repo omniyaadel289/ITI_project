@@ -7,9 +7,9 @@
             <li><router-link to='/smartphones' class="text-light" >Smart Phones</router-link></li>
             <li><router-link to='/notebooks' class="text-light"  >Notebooks</router-link></li>
             <li>
-              <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span class="circle"></span></button>
-                    <div class="dropdown-menu">
-                    <div  v-for="item in productToCart"  class="dropdown-item card">
+              <button @click="setCart()" type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span class="circle"></span></button>
+                    <div class="dropdown-menu ">
+                    <div  v-for="item in productToCart"  class="dropdown-item card d-flex ">
                     <div class="text-center">
                         <img :src="item.image" class="card-img-top product-img " style="height:5rem; width: 5rem;">
                         </div>
@@ -21,7 +21,7 @@
                         </div>
                         </div>
                        <div class="text-center my-3"><router-link to='/cart'  class="btn btn-primary text-light">View Cart</router-link></div>
-                      <span class="dropdown-header"><b>Total Price : {{totalPrice}} $</b></span>
+                      <span class="dropdown-header"><b>Total Price :  $</b></span>
                     </div>
             </li>
         </ul>
@@ -38,20 +38,14 @@
 export default {  
     data(){
       return{
-       
-        productToCart : [],
+        productToCart : localStorage.getItem("product") ? JSON.parse( localStorage.getItem("product"))  : [],
         totalPrice : 0,
       }
     },
 
     methods: {
-        addProductToCart : function (product) {
-          this.productToCart.push(product);
-          this.totalPrice += product.price;
-        },
-        removeProduct : function(product,index){
-            this.productToCart.splice(index, 1);
-            this.totalPrice -= product.price;
+        setCart : function(){
+            this.productToCart = localStorage.getItem("product") ? JSON.parse( localStorage.getItem("product"))  : [];
         },
     },
 }
