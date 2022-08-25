@@ -1,14 +1,14 @@
 <template>
 <div class="col-9 my-3 mx-auto">
-    <h2 class="text-danger" v-if="products.length == 0">No Products <br>Back to list of products...</h2>
-    <div v-if="products.length>0" v-for="(item,index) in products" :key="index" class="card my-3" style="width: 50rem;">
+    <h2 class="text-danger" v-if="products.length == 0">No Products <br><router-link to ='/' class="text-danger">Back to list of products...</router-link></h2>
+    <div v-if="products.length>0" v-for="(item,index) in products" :key="index" class="card my-3 d-flex" style="max-idth: 50rem;">
         <div class="row no-gutters">
             <div class="col-sm-2">
-                <img class="card-img" :src="item.image">
+                <img class="card-img" :src="item.image" style="max-height:30rem; max-width: 30rem ;">
             </div>
             <div class="col-sm-5">
                 <div class="card-body">
-                     <h4 class="card-title">{{item.name}}</h4>
+                     <h5 class="card-title">{{item.name}}</h5>
                     <p class="card-text">{{item.details}}</p>
                     <h6 class="card-text text-success my-2">{{item.price}}$</h6>
                     <button class="btn btn-danger my-3" >Remove</button> 
@@ -41,6 +41,6 @@
 </script>
 
 
-<!-- <style scoped>
+ <style scoped>
 
-</style> -->
+</style> 

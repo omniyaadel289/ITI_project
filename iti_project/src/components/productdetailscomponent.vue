@@ -1,12 +1,11 @@
 <template>
 <template>{{loadproductdetails ($route.params.id)}}</template>
 <div class="d-flex justify-content-center">
-                    <div  class="card my-3 py-3 align-items-center" style="width:30rem; height: 40rem ;"  >
-                        <img :src="productimage" class="card-img-top product-img " style="max-height: 60% ;max-width:50% ;">
-                    
+                    <div  class="card my-3 py-3 align-items-center" style="width:30rem; max-height: 60rem ;"  >
+                        <img :src="productimage" class="card-img-top product-img " style="max-height: 50% ;max-width:50% ;">        
                         <div class="card-body">
-                            <h3 class="card-title text-center">{{productname}} </h3>
-                            <h6 class="card-title text-left"> {{productreviews}} Reviews </h6>
+                            <h4 class="card-title text-center">{{productname}} </h4>
+                            <h6 class="card-title text-left text-warning "> {{productreviews}} Reviews </h6>
                         </div>
                         <h5 class="card-text my-3 px-3 text-success ">{{productprice}} $</h5>
                                                     <div class="text-center">

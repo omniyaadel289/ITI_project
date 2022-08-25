@@ -20,8 +20,8 @@
       "name": "Samsung Galaxy A52 Dual SIM - 6.5 inches, 8 GB RAM, 256 GB - White",
       "price": 8770,
       "image": "https://cdn.weasy.io/users/rumex2/catalog/821150_3_samsung-galaxy-a52-5g-6-5-dual-sim-8gb-256gb-white-desbloqueado_thumb.jpg",
-      "stars": 0,
-      "totalReviews": 0,
+      "stars": 5,
+      "totalReviews": 10,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
     { "id": 4,
@@ -29,7 +29,7 @@
       "price": 2400,
       "image": "https://shop.du.ae/medias/sys_master/images/images/h77/h4a/9006506541086/iPhone-13-Alpine-Green-.jpg",
       "stars": 5,
-      "totalReviews": 0,
+      "totalReviews": 6,
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
     },
     { "id": 5,

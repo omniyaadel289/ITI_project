@@ -7,8 +7,7 @@ import cart from '../components/cartcomponent.vue'
 import productdetails from '../components/productdetailscomponent.vue'
 
 const routes =[
-    //{path:'/',component:wrapper},
-    {path:'/allproducts',component:allproducts},
+    {path:'/',component:allproducts},
     {path:'/smartphones',component:smartphones},
     {path:'/notebooks',component:notebooks},
     {path:'/cart',component:cart},
