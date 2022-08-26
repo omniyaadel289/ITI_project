@@ -7,28 +7,30 @@
             <li><a class="text-light" href="#" @click.prevent="targetcomponent='smartphones'">Smart Phones</a></li>
             <li><a class="text-light" href="#" @click.prevent="targetcomponent='notebooks'">Notebooks</a></li>
             <li>
-              <button type="button" class="btn btn-primary px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span class="circle"></span></button>
+              <button type="button" id="cartbtn" class="btn text-light " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cart <i class="fa-solid fa-cart-shopping"></i><span v-if="productToCart.length > 0" class="circle">{{productToCart.length}}</span></button>
                     <div class="dropdown-menu">
-                    <div  v-for="item in productToCart"  class="dropdown-item card">
-                    <div class="text-center">
-                        <img :src="item.image" class="card-img-top product-img " style="height:5rem; width: 5rem;">
+                    <div  v-for="item in productToCart"  class="dropdown-item disabled card">
+                        <div class="text-center">
+                          <img :src="item.image" class="card-img-top product-img " style="max-height:5rem; width: 5rem;">
                         </div>
                         <div class="card-body">
-                          <div class="newline text-center">
+                          <div class="newline text-center text-dark">
                             {{item.name}} 
                             </div>
                             <h6 class="card-text text-success my-3 ">{{item.price}} $</h6>
                         </div>
-                        </div>
-                       <div class="text-center my-3"><a  class="btn btn-primary text-light" @click.prevent="targetcomponent='cart'">View Cart</a></div>
-                      <span class="dropdown-header"><b>Total Price : {{totalPrice}} $</b></span>
+                    </div>
+                    
+                      <div v-if="productToCart.length > 0" class=" d-flex justify-content-between my-3 mx-2"><b>Total : {{totalPrice}} $ </b> <a  class="btn text-light" style="background-color: #2d9cdb;" @click.prevent="targetcomponent='cart'">View Cart</a></div>
+                    
+                      <h4 v-if="productToCart.length == 0" class="dropdown-header text-danger mx-5">No Products Yet</h4>
                     </div>
             </li>
         </ul>
         </div>
     </div>
-    
-      <Transition name="slide-fade">
+
+<Transition name="slide-fade">
     <allproducts v-if="targetcomponent === 'allproducts'" :addProductToCart="addProductToCart"/>
       </Transition>
       <Transition name="slide-fade">
@@ -40,6 +42,7 @@
 <transition name="slide-fade">
     <cart v-if="targetcomponent === 'cart'" :products="productToCart" :totalPrice="totalPrice" :removeProduct="removeProduct"/>
 </transition>
+
 </div>
 </template>
 
@@ -53,7 +56,7 @@ import cart from './components/cartcomponent.vue'
 export default {  
     data(){
       return{
-       
+        targetcomponent:'allproducts',
         productToCart : [],
         totalPrice : 0,
       }
@@ -82,37 +85,13 @@ export default {
 <style scoped>
 li{
   display: inline-block;
-  font-family:'Lucida Sans';
   font-size: large;
   
 }
 a{
+  font-family: sans-serif;
     text-decoration: none;
 }
-/*appear
-.leave-enter-active {
-    transition: all 0s;
-  }
-  .appear-enter-active {
-    animation: appear-animation 2s;
-  }
-  @keyframes appear-animation {
-    0% {
-      transform: translateY(10%);
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }*/
-
-    /* fade 
-    .fade-enter-active, .fade-leave-active {
-    transition: all 0.5s;
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }*/
   .newline {
     width: 18rem;
     white-space: pre-wrap;
@@ -124,23 +103,33 @@ a{
 }
 
 .slide-fade-leave-active {
-  transition: all 1s cubic-bezier(100, 1, 1, 1);
+  transition: all 1s cubic-bezier(100, 1, 1, 0);
 }
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateX(1000px);
+  transform: translateX(800px);
   opacity: 0;
 }
+
 .circle{
+  display: flex;
+  justify-content: center;
   position: absolute;
-  top: 0.70em;
-  right: 8em;
-  width: 1.5em;
-  height: 1.5em;
+  top: -0.50em;
+  right: -0.40em;
+     width: 25px;
+    height: 25px;
   border-radius: 50%;
   background-color: white;
-  color: red;
+  color: black;
+}
+#cartbtn{
+  position: relative;
+  background-color: #2d9cdb;
+      border-radius: 3px;
+      padding: 0.3em 2.2em;
+
 }
 </style>
 

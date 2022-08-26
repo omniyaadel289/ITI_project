@@ -1,9 +1,9 @@
 <template>
                  <div class="d-flex flex-row flex-wrap justify-content-around">
-                    <div  v-for="notebook in notebook" :key="notebook.price" class="card my-3 py-3" style="width:20rem; height: 30rem;">
-                        <img :src="notebook.image" class="card-img-top product-img" style="max-height: 50% ;">
+                    <div  v-for="notebook in notebook" :key="notebook.price" class="card border-info my-3 py-3" style="width:21rem; height: 35rem;">
+                        <img :src="notebook.image" class="card-img-top product-img" style="max-height: 60% ;">
                         <div class="card-body" >
-                            <h5 class="card-title text-center"><router-link :to="'/productdetails' + notebook.id" href="#" class="text-dark" >{{notebook.name}}</router-link> </h5>
+                            <h5 class="card-title text-center">{{notebook.name}} </h5>
                         </div>
                         <h6 class="card-text my-3 px-3">{{notebook.price}} $</h6>
                             <div class="text-center">
@@ -25,20 +25,16 @@ export default {
       const res= await fetch("http://localhost:3000/notebook");
       this.notebook=await res.json();
     },
-    // props : ['addProductToCart'],
+    props : ['addProductToCart'],
     data(){
         return{
         notebook : [],
-        noteToCart : localStorage.getItem("product") ? JSON.parse( localStorage.getItem("product"))  : [],
         }
     },components:{
     notebookscomponent,
 },
     methods: {
-            addProductToCart: function(product){
-            this.noteToCart.push(product);
-            localStorage.setItem("product",JSON.stringify(this.noteToCart));
-        },
+     
     }
 }
 
