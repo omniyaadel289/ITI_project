@@ -85,7 +85,9 @@ export default {
 <style scoped>
 li{
   display: inline-block;
-  font-size: large;
+  font-size: medium;
+  margin-left: 5px ;
+  margin-right: 5px ;
   
 }
 a{
@@ -117,7 +119,7 @@ a{
   justify-content: center;
   position: absolute;
   top: -0.50em;
-  right: -0.40em;
+  right: -0.60em;
      width: 25px;
     height: 25px;
   border-radius: 50%;
