@@ -1,9 +1,9 @@
 <template>
                 <div class="d-flex flex-row flex-wrap justify-content-around" id="all">
-                    <div  v-for="product in allproducts" :key="product.price" class="card border-info my-3 py-3" style="width:21rem; height: 35rem ;">
+                    <div  v-for="(product,index) in allproducts" :key="product.price" class="card border-info my-3 py-3" style="width:21rem; height: 35rem ;">
                         <img :src="product.image" class="card-img-top product-img" style="max-height: 60% ;">
                         <div class="card-body">
-                            <h5 class="card-title text-center"><a class="text-dark" href="#" data-toggle="modal" data-target="#mymodal">{{product.name}}</a> </h5>
+                            <h5><a href="" @click="handelModel(index)" data-toggle="modal" data-target="#mymodal" class="card-title text-center text-dark ">{{product.name}}</a></h5>
                         </div>
                         <h6 class="card-text my-3 px-3">{{product.price}} $</h6>
                                                     <div class="text-center">
@@ -11,18 +11,22 @@
                             </div>
                     </div>
                 </div>
-                <div class="modal" id="mymodal">
+                <div v-if="openModel == true" class="modal" id="mymodal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div v-for="product in allproducts" :key="product.price" class="modal-body text-center">
-                                <img :src="product.image" class="modal-img"/>
+                    <div class="modal-body text-center">
+                                <img :src="allproducts[productModel].image" class="modal-img"/>
                                 <div id="newline">
-                                <h3>{{product.name}}</h3>
-                                <h6>{{product.details}}</h6>
-                                <h6 class="text-left text-success">{{product.price}}$</h6>
+                                <h3>{{allproducts[productModel].name}}</h3>
+                                <h6 class="my-2">{{allproducts[productModel].details}}</h6>
+                                      <stars class="my-2" :rate="rated(allproducts[productModel].stars)"/>
+                                <h6 class="text-left">{{allproducts[productModel].totalReviews}} Reviews.</h6>
+                                <h5 class="text-left text-success my-3"><b>{{allproducts[productModel].price}}$</b></h5>
                     </div>
-                    <div class="modal-footer justify-content-center">
-                        <span class="close" data-dismiss="modal" data-target="#mymodal" ><button class="btn btn-success px-5" @click="addProductToCart(product)">Buy Now <i class="fa-solid fa-cart-shopping"></i></button></span>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger ml-3" data-dismiss="modal" data-target="#mymodal">Close</button>
+                        <button class="btn btn-success px-4 " @click="addProductToCart(allproducts[productModel])">Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        
                     </div>
                 </div>
             </div>
@@ -33,6 +37,7 @@
 <script>
 
 import allproductscomponent from './allproductscomponent.vue'
+import stars from './stars.vue';
 
 
 export default {
@@ -44,19 +49,37 @@ export default {
     data(){
         return{
         allproducts : [],
+        productModel : 0,
+        openModel : false,
         }
     },components:{
     allproductscomponent,
+    stars
     },
+
+    methods : {
+        handelModel : function(index) {
+            this.productModel = index;
+            this.openModel = true;
+        } ,
+       rated(rate) {
+      return `${rate * 20}%`;
+    },
+    }
 }
 
 
 </script>
     <style scoped>
 
-    
+              #newline {
+    width: 30rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
     .modal-img{
         max-height: 300px ;
         width: 300px ;
     }
+
     </style>
